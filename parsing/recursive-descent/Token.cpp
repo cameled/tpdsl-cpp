@@ -1,8 +1,12 @@
 
+#include <sstream>
+
 #include "Token.h"
 #include "ListLexer.h"
 
 std::string Token::toString()
 {
-	return "<\"" + ListLexer::tokenNames[m_type] + "\", " + m_text + ">";
+	std::ostringstream os;
+	os << "<\"" << ListLexer::tokenNames[m_type] << "\", " << m_text << ">";
+	return os.str();
 }

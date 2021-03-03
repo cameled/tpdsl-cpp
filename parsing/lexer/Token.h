@@ -22,6 +22,7 @@ public:
 	std::string getText() {
 		return m_text;
 	}
+
 	std::string toString();
 
 private:
